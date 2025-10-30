@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Gama Protfolio</title>
   </head>
   <body>
     <header class="bg-white border-b shadow-sm sticky top-0 z-50">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
         <!-- Logo & Nama -->
         <div class="flex items-center gap-3">
           <a
@@ -18,7 +20,7 @@
             aria-label="Kembali ke beranda"
           >
             <img
-              src="./gamawijaya.png"
+              src="./gamawijaya.jpeg"
               alt="Gama Gamawijaya"
               class="w-10 h-10 rounded-full object-cover shadow-md"
               loading="lazy"
@@ -33,11 +35,21 @@
 
         <!-- Navigation (Desktop) -->
         <nav class="hidden md:flex gap-6 text-gray-600 text-sm font-medium">
-          <a href="#about" class="hover:text-indigo-600 transition-colors">Tentang</a>
-          <a href="#skills" class="hover:text-indigo-600 transition-colors">Skill</a>
-          <a href="#projects" class="hover:text-indigo-600 transition-colors">Proyek</a>
-          <a href="#experience" class="hover:text-indigo-600 transition-colors">Pengalaman</a>
-          <a href="#contact" class="hover:text-indigo-600 transition-colors">Kontak</a>
+          <a href="#about" class="hover:text-indigo-600 transition-colors"
+            >Tentang</a
+          >
+          <a href="#skills" class="hover:text-indigo-600 transition-colors"
+            >Skill</a
+          >
+          <a href="#projects" class="hover:text-indigo-600 transition-colors"
+            >Proyek</a
+          >
+          <a href="#experience" class="hover:text-indigo-600 transition-colors"
+            >Pengalaman</a
+          >
+          <a href="#contact" class="hover:text-indigo-600 transition-colors"
+            >Kontak</a
+          >
         </nav>
 
         <!-- Theme Toggle Button
@@ -81,16 +93,16 @@
             background-color: #0b0b0b;
             color: #ffffff;
           }
-          
+
           .dark header {
             background-color: #0f1724; /* subtle dark header */
             border-color: #1f2937;
           }
-          
+
           .dark .border {
             border-color: #1f2937;
           }
-          
+
           .dark .text-gray-700,
           .dark .text-gray-600,
           .dark .text-slate-600 {
@@ -117,12 +129,24 @@
         role="menu"
         aria-labelledby="menuBtn"
       >
-        <div class="px-6 py-4 flex flex-col gap-3 text-gray-700 text-sm font-medium">
-          <a href="#about" class="hover:text-indigo-600 transition-colors">Tentang</a>
-          <a href="#skills" class="hover:text-indigo-600 transition-colors">Skill</a>
-          <a href="#projects" class="hover:text-indigo-600 transition-colors">Proyek</a>
-          <a href="#experience" class="hover:text-indigo-600 transition-colors">Pengalaman</a>
-          <a href="#contact" class="hover:text-indigo-600 transition-colors">Kontak</a>
+        <div
+          class="px-6 py-4 flex flex-col gap-3 text-gray-700 text-sm font-medium"
+        >
+          <a href="#about" class="hover:text-indigo-600 transition-colors"
+            >Tentang</a
+          >
+          <a href="#skills" class="hover:text-indigo-600 transition-colors"
+            >Skill</a
+          >
+          <a href="#projects" class="hover:text-indigo-600 transition-colors"
+            >Proyek</a
+          >
+          <a href="#experience" class="hover:text-indigo-600 transition-colors"
+            >Pengalaman</a
+          >
+          <a href="#contact" class="hover:text-indigo-600 transition-colors"
+            >Kontak</a
+          >
         </div>
       </div>
     </header>
@@ -135,7 +159,9 @@
             Muhammad Ademajid Gamawijaya
           </h2>
           <p class="mt-4 text-slate-600">
-            Saya adalah Frontend Developer yang mengutamakan efisiensi kode, aksesibilitas tinggi, dan tampilan antarmuka yang rapi serta berkinerja maksimal.
+            Saya adalah Frontend Developer yang mengutamakan efisiensi kode,
+            aksesibilitas tinggi, dan tampilan antarmuka yang rapi serta
+            berkinerja maksimal.
           </p>
           <div class="mt-6 flex gap-3">
             <a
@@ -151,15 +177,17 @@
           </div>
           <div class="mt-6 grid grid-cols-2 gap-3 text-sm text-slate-500">
             <div>
-                <div class="text-xs text-slate-400">Lokasi</div>
-                <div>
-                <a href="https://maps.google.com/?q=Pekalongan,Indonesia" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="hover:text-indigo-600">
+              <div class="text-xs text-slate-400">Lokasi</div>
+              <div>
+                <a
+                  href="https://maps.google.com/?q=Pekalongan,Indonesia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:text-indigo-600"
+                >
                   Pekalongan, Indonesia
                 </a>
-                </div>
+              </div>
             </div>
             <div>
               <div class="text-xs text-slate-400">Email</div>
@@ -174,12 +202,12 @@
 
         <div class="flex justify-center">
           <div
-            class="w-56 h-56 rounded-xl overflow-hidden shadow-lg bg-gradient-to-tr from-indigo-50 to-white flex items-center justify-center photo-frame"
+            class="w-56 h-56 rounded-full overflow-hidden shadow-lg bg-gradient-to-tr from-indigo-50 to-white flex items-center justify-center photo-frame"
           >
             <!-- Single profile image element. id="heroPhoto" is required for JS fallback loader -->
             <img
               id="heroPhoto"
-              src="./gamawijaya.png"
+              src="./gamawijaya.jpeg"
               alt="Foto Gama Gamawijaya"
               class="photo w-full h-full object-cover"
               loading="lazy"
@@ -242,10 +270,12 @@
         <h3 class="text-xl font-semibold">Proyek Terpilih</h3>
         <div class="mt-6 grid md:grid-cols-2 gap-6">
           <article class="p-5 border rounded-lg hover:shadow-lg transition">
-            <h4 class="font-semibold">Aplikasi E-Voting Berbasis Web Di Pondok Modern Tazakka Bandar</h4>
+            <h4 class="font-semibold">
+              Aplikasi E-Voting Berbasis Web Di Pondok Modern Tazakka Bandar
+            </h4>
             <p class="mt-2 text-sm text-slate-600">
-              E-Voting yang real-time untuk memantau metrik suara masuk dengan grafik
-              interaktif dan filtrasi cepat.
+              E-Voting yang real-time untuk memantau metrik suara masuk dengan
+              grafik interaktif dan filtrasi cepat.
             </p>
             <div class="mt-3 flex items-center gap-3 text-xs text-slate-500">
               <span class="px-2 py-1 bg-slate-100 rounded">Php</span>
@@ -262,7 +292,7 @@
             </p>
             <div class="mt-3 flex items-center gap-3 text-xs text-slate-500">
               <span class="px-2 py-1 bg-slate-100 rounded">Tailwind</span>
-              <span class="px-2 py-1 bg-slate-100 rounded">A11y</span>
+              <span class="px-2 py-1 bg-slate-100 rounded"></span>
               <a href="#" class="ml-auto text-indigo-600">Demo</a>
             </div>
           </article>
@@ -277,7 +307,7 @@
             <div class="flex justify-between items-center">
               <div>
                 <div class="font-semibold">Growth Up Digital Academy</div>
-                <div class="text-sm text-slate-500"> 2025 — Sekarang</div>
+                <div class="text-sm text-slate-500">2025 — Sekarang</div>
               </div>
               <div class="text-sm text-slate-500">Pekalongan</div>
             </div>
@@ -356,15 +386,23 @@
     </main>
 
     <footer class="bg-slate-50 border-t">
-      <div class="max-w-5xl mx-auto px-6 py-6 flex flex-col items-center text-sm text-slate-500 text-center">
-      <div>
-        © <span id="year"></span> Muhammad Ademajid Gamawijaya — Semua hak dilindungi.
-      </div>
-      <div class="mt-3 flex gap-4">
-        <a href="#" class="hover:text-indigo-600">LinkedIn</a>
-        <a href="https://github.com/Gamawijaya" class="hover:text-indigo-600">GitHub</a>
-        <a href="https://www.instagram.com/wijayagama0257?igsh=NTgwbnoyNXJoZXEy" class="hover:text-indigo-600">Instagram</a>
-      </div>
+      <div
+        class="max-w-5xl mx-auto px-6 py-6 flex flex-col items-center text-sm text-slate-500 text-center"
+      >
+        <div>
+          © <span id="year"></span> Muhammad Ademajid Gamawijaya — Semua hak
+          dilindungi.
+        </div>
+        <div class="mt-3 flex gap-4">
+          <a
+            href="www.linkedin.com/in/muhammad-ademajid-gamawijaya"
+            class="hover:text-indigo-600"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/Gamawijaya" class="hover:text-indigo-600"
+            >GitHub</a
+          >
+        </div>
       </div>
     </footer>
 
@@ -388,9 +426,9 @@
 
         // Ordered list of candidate sources (relative paths preferred).
         const candidates = [
-          "assets/src/img/gamawijaya.png",
-          "assets/gamawijaya.png",
-          "gamawijaya.png",
+          "assets/src/img/gamawijaya.jpeg",
+          "assets/gamawijaya.jpeg",
+          "gamawijaya.jpeg",
         ];
 
         const svgFallback =
