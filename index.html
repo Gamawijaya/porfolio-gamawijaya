@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="stylesheet" href="style.css">
+     <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Gama Protfolio</title>
   </head>
@@ -40,7 +40,7 @@
           <a href="#contact" class="hover:text-indigo-600 transition-colors">Kontak</a>
         </nav>
 
-        <!-- Theme Toggle Button -->
+        <!-- Theme Toggle Button
         <button 
           id="themeToggleBtn"
           onclick="toggleDarkMode()"
@@ -73,7 +73,7 @@
             if (themeIcon) themeIcon.textContent = isDark ? '🌙' : '🌞';
             if (themeBtn) themeBtn.setAttribute('aria-pressed', String(isDark));
           }
-        </script>
+        </script> -->
 
         <style>
           /* Dark mode styles (small overrides to supplement Tailwind or plain CSS) */
@@ -151,8 +151,15 @@
           </div>
           <div class="mt-6 grid grid-cols-2 gap-3 text-sm text-slate-500">
             <div>
-              <div class="text-xs text-slate-400">Lokasi</div>
-              <div>Pekalongan, Indonesia</div>
+                <div class="text-xs text-slate-400">Lokasi</div>
+                <div>
+                <a href="https://maps.google.com/?q=Pekalongan,Indonesia" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="hover:text-indigo-600">
+                  Pekalongan, Indonesia
+                </a>
+                </div>
             </div>
             <div>
               <div class="text-xs text-slate-400">Email</div>
@@ -235,14 +242,14 @@
         <h3 class="text-xl font-semibold">Proyek Terpilih</h3>
         <div class="mt-6 grid md:grid-cols-2 gap-6">
           <article class="p-5 border rounded-lg hover:shadow-lg transition">
-            <h4 class="font-semibold">Dashboard Analitik</h4>
+            <h4 class="font-semibold">Aplikasi E-Voting Berbasis Web Di Pondok Modern Tazakka Bandar</h4>
             <p class="mt-2 text-sm text-slate-600">
-              Dashboard real-time untuk memantau metrik produk dengan grafik
+              E-Voting yang real-time untuk memantau metrik suara masuk dengan grafik
               interaktif dan filtrasi cepat.
             </p>
             <div class="mt-3 flex items-center gap-3 text-xs text-slate-500">
-              <span class="px-2 py-1 bg-slate-100 rounded">React</span>
-              <span class="px-2 py-1 bg-slate-100 rounded">D3</span>
+              <span class="px-2 py-1 bg-slate-100 rounded">Php</span>
+              <span class="px-2 py-1 bg-slate-100 rounded">Lravel12</span>
               <a href="#" class="ml-auto text-indigo-600">Lihat</a>
             </div>
           </article>
@@ -269,10 +276,10 @@
           <div class="p-4 border rounded-md">
             <div class="flex justify-between items-center">
               <div>
-                <div class="font-semibold">Frontend Developer - PT. Contoh</div>
-                <div class="text-sm text-slate-500">Jan 2022 — Sekarang</div>
+                <div class="font-semibold">Growth Up Digital Academy</div>
+                <div class="text-sm text-slate-500"> 2025 — Sekarang</div>
               </div>
-              <div class="text-sm text-slate-500">Bandung</div>
+              <div class="text-sm text-slate-500">Pekalongan</div>
             </div>
             <p class="mt-2 text-slate-600 text-sm">
               Mengembangkan fitur UI, mengoptimalkan bundle, dan meningkatkan
@@ -349,17 +356,15 @@
     </main>
 
     <footer class="bg-slate-50 border-t">
-      <div
-        class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500"
-      >
-        <div>
-          © <span id="year"></span> Gama Gamawijaya — Semua hak dilindungi.
-        </div>
-        <div class="mt-3 md:mt-0 flex gap-4">
-          <a href="#" class="hover:text-indigo-600">LinkedIn</a>
-          <a href="#" class="hover:text-indigo-600">GitHub</a>
-          <a href="#" class="hover:text-indigo-600">Twitter</a>
-        </div>
+      <div class="max-w-5xl mx-auto px-6 py-6 flex flex-col items-center text-sm text-slate-500 text-center">
+      <div>
+        © <span id="year"></span> Muhammad Ademajid Gamawijaya — Semua hak dilindungi.
+      </div>
+      <div class="mt-3 flex gap-4">
+        <a href="#" class="hover:text-indigo-600">LinkedIn</a>
+        <a href="https://github.com/Gamawijaya" class="hover:text-indigo-600">GitHub</a>
+        <a href="https://www.instagram.com/wijayagama0257?igsh=NTgwbnoyNXJoZXEy" class="hover:text-indigo-600">Instagram</a>
+      </div>
       </div>
     </footer>
 
