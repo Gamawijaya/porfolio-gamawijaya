@@ -1,0 +1,24 @@
+:root {
+    --bg: #ffffff;
+    --text: #333333;
+    --link: #1a73e8;
+    --nav-bg: #f8f8f8;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a { color: var(--link); }
+
+.navbar { background-color: var(--nav-bg); }
+
+/* Dark mode variables */
+.dark-mode {
+    --bg: #1a1a1a;
+    --text: #ffffff;
+    --link: #ffffff;
+    --nav-bg: #252525;
+}

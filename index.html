@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Gama Protfolio</title>
+  </head>
+  <body>
+    <header class="bg-white border-b shadow-sm sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <!-- Logo & Nama -->
+        <div class="flex items-center gap-3">
+          <a
+            href="/"
+            class="block hover:opacity-90 transition"
+            aria-label="Kembali ke beranda"
+          >
+            <img
+              src="./gamawijaya.png"
+              alt="Gama Gamawijaya"
+              class="w-10 h-10 rounded-full object-cover shadow-md"
+              loading="lazy"
+            />
+          </a>
+          <span
+            class="text-base md:text-lg font-semibold text-gray-800 select-none cursor-default"
+          >
+            Muhammad Ademajid Gamawijaya
+          </span>
+        </div>
+
+        <!-- Navigation (Desktop) -->
+        <nav class="hidden md:flex gap-6 text-gray-600 text-sm font-medium">
+          <a href="#about" class="hover:text-indigo-600 transition-colors">Tentang</a>
+          <a href="#skills" class="hover:text-indigo-600 transition-colors">Skill</a>
+          <a href="#projects" class="hover:text-indigo-600 transition-colors">Proyek</a>
+          <a href="#experience" class="hover:text-indigo-600 transition-colors">Pengalaman</a>
+          <a href="#contact" class="hover:text-indigo-600 transition-colors">Kontak</a>
+        </nav>
+
+        <!-- Theme Toggle Button -->
+        <button 
+          id="themeToggleBtn"
+          onclick="toggleDarkMode()"
+          class="px-3 py-2 border rounded-md text-gray-700 hover:bg-gray-100 transition flex items-center gap-2"
+          aria-label="Toggle dark mode"
+          aria-pressed="false"
+        >
+          <span id="themeIcon">🌞</span>
+          <span class="text-sm">Theme</span>
+        </button>
+
+        <script>
+          // Theme init: check saved preference and set icon & aria-pressed
+          (function () {
+            const icon = document.getElementById('themeIcon');
+            const btn = document.getElementById('themeToggleBtn');
+            const saved = localStorage.getItem('darkMode') === 'true';
+            if (saved) document.documentElement.classList.add('dark');
+            if (icon) icon.textContent = saved ? '🌙' : '🌞';
+            if (btn) btn.setAttribute('aria-pressed', String(saved));
+          })();
+
+          function toggleDarkMode() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('darkMode', isDark);
+            
+            // Update icon and aria-pressed
+            const themeIcon = document.getElementById('themeIcon');
+            const themeBtn = document.getElementById('themeToggleBtn');
+            if (themeIcon) themeIcon.textContent = isDark ? '🌙' : '🌞';
+            if (themeBtn) themeBtn.setAttribute('aria-pressed', String(isDark));
+          }
+        </script>
+
+        <style>
+          /* Dark mode styles (small overrides to supplement Tailwind or plain CSS) */
+          .dark {
+            background-color: #0b0b0b;
+            color: #ffffff;
+          }
+          
+          .dark header {
+            background-color: #0f1724; /* subtle dark header */
+            border-color: #1f2937;
+          }
+          
+          .dark .border {
+            border-color: #1f2937;
+          }
+          
+          .dark .text-gray-700,
+          .dark .text-gray-600,
+          .dark .text-slate-600 {
+            color: #94a3b8;
+          }
+        </style>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menuBtn"
+          class="md:hidden px-3 py-2 border rounded-md text-gray-700 hover:bg-gray-100 transition"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden border-t bg-white transition-all duration-300 ease-in-out"
+        role="menu"
+        aria-labelledby="menuBtn"
+      >
+        <div class="px-6 py-4 flex flex-col gap-3 text-gray-700 text-sm font-medium">
+          <a href="#about" class="hover:text-indigo-600 transition-colors">Tentang</a>
+          <a href="#skills" class="hover:text-indigo-600 transition-colors">Skill</a>
+          <a href="#projects" class="hover:text-indigo-600 transition-colors">Proyek</a>
+          <a href="#experience" class="hover:text-indigo-600 transition-colors">Pengalaman</a>
+          <a href="#contact" class="hover:text-indigo-600 transition-colors">Kontak</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="home" class="max-w-5xl mx-auto px-6 pt-12 pb-24">
+      <section class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="text-sm text-indigo-600 font-semibold">Halo, saya</p>
+          <h2 class="mt-2 text-3xl md:text-4xl font-bold">
+            Muhammad Ademajid Gamawijaya
+          </h2>
+          <p class="mt-4 text-slate-600">
+            Saya adalah Frontend Developer yang mengutamakan efisiensi kode, aksesibilitas tinggi, dan tampilan antarmuka yang rapi serta berkinerja maksimal.
+          </p>
+          <div class="mt-6 flex gap-3">
+            <a
+              href="#projects"
+              class="bg-indigo-600 text-white px-4 py-2 rounded-md"
+              >Lihat Proyek</a
+            >
+            <a
+              href="#contact"
+              class="border border-slate-200 px-4 py-2 rounded-md text-slate-700"
+              >Hubungi Saya</a
+            >
+          </div>
+          <div class="mt-6 grid grid-cols-2 gap-3 text-sm text-slate-500">
+            <div>
+              <div class="text-xs text-slate-400">Lokasi</div>
+              <div>Pekalongan, Indonesia</div>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400">Email</div>
+              <div>
+                <a href="mailto:ademajid1234@gmail.com" class="text-indigo-600"
+                  >ademajid1234@gmail.com</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <div
+            class="w-56 h-56 rounded-xl overflow-hidden shadow-lg bg-gradient-to-tr from-indigo-50 to-white flex items-center justify-center photo-frame"
+          >
+            <!-- Single profile image element. id="heroPhoto" is required for JS fallback loader -->
+            <img
+              id="heroPhoto"
+              src="./gamawijaya.png"
+              alt="Foto Gama Gamawijaya"
+              class="photo w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="mt-16">
+        <h3 class="text-xl font-semibold">Tentang </p>Saya</h3>
+        <p class="mt-3 text-slate-600">
+          Saya membangun antarmuka yang intuitif dengan fokus pada pengalaman
+          pengguna, performa, dan maintainability. Keahlian utama: HTML, CSS
+          (Tailwind), JavaScript, React, dan optimasi aksesibilitas.
+        </p>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="mt-10">
+        <h3 class="text-xl font-semibold">Keahlian</h3>
+        <div class="mt-4 grid sm:grid-cols-2 gap-4">
+          <div>
+            <div class="flex justify-between text-sm">
+              <span>HTML & CSS</span><span>95%</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded mt-2">
+              <div class="h-2 bg-indigo-600 rounded" style="width: 95%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm">
+              <span>JavaScript</span><span>90%</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded mt-2">
+              <div class="h-2 bg-indigo-600 rounded" style="width: 90%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm">
+              <span>React</span><span>85%</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded mt-2">
+              <div class="h-2 bg-indigo-600 rounded" style="width: 85%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm">
+              <span>UI/UX & A11y</span><span>80%</span>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded mt-2">
+              <div class="h-2 bg-indigo-600 rounded" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="mt-12">
+        <h3 class="text-xl font-semibold">Proyek Terpilih</h3>
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <article class="p-5 border rounded-lg hover:shadow-lg transition">
+            <h4 class="font-semibold">Dashboard Analitik</h4>
+            <p class="mt-2 text-sm text-slate-600">
+              Dashboard real-time untuk memantau metrik produk dengan grafik
+              interaktif dan filtrasi cepat.
+            </p>
+            <div class="mt-3 flex items-center gap-3 text-xs text-slate-500">
+              <span class="px-2 py-1 bg-slate-100 rounded">React</span>
+              <span class="px-2 py-1 bg-slate-100 rounded">D3</span>
+              <a href="#" class="ml-auto text-indigo-600">Lihat</a>
+            </div>
+          </article>
+
+          <article class="p-5 border rounded-lg hover:shadow-lg transition">
+            <h4 class="font-semibold">Landing Page Perusahaan</h4>
+            <p class="mt-2 text-sm text-slate-600">
+              Landing page responsif dengan optimasi performa dan SEO, konversi
+              yang meningkat 30%.
+            </p>
+            <div class="mt-3 flex items-center gap-3 text-xs text-slate-500">
+              <span class="px-2 py-1 bg-slate-100 rounded">Tailwind</span>
+              <span class="px-2 py-1 bg-slate-100 rounded">A11y</span>
+              <a href="#" class="ml-auto text-indigo-600">Demo</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="mt-12">
+        <h3 class="text-xl font-semibold">Pengalaman Kerja</h3>
+        <div class="mt-4 space-y-4">
+          <div class="p-4 border rounded-md">
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="font-semibold">Frontend Developer - PT. Contoh</div>
+                <div class="text-sm text-slate-500">Jan 2022 — Sekarang</div>
+              </div>
+              <div class="text-sm text-slate-500">Bandung</div>
+            </div>
+            <p class="mt-2 text-slate-600 text-sm">
+              Mengembangkan fitur UI, mengoptimalkan bundle, dan meningkatkan
+              skor Lighthouse untuk aplikasi utama.
+            </p>
+          </div>
+
+          <div class="p-4 border rounded-md">
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="font-semibold">Junior Frontend - Startup XYZ</div>
+                <div class="text-sm text-slate-500">Jul 2020 — Des 2021</div>
+              </div>
+              <div class="text-sm text-slate-500">Remote</div>
+            </div>
+            <p class="mt-2 text-slate-600 text-sm">
+              Berfokus pada pembuatan komponen yang dapat digunakan ulang dan
+              integrasi API.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="mt-12">
+        <h3 class="text-xl font-semibold">Kontak</h3>
+        <p class="mt-2 text-slate-600">
+          Tertarik bekerja sama? Kirim pesan singkat melalui formulir di bawah
+          atau email langsung.
+        </p>
+
+        <form class="mt-4 grid gap-3 max-w-2xl" action="#" method="post">
+          <div class="grid sm:grid-cols-2 gap-3">
+            <input
+              name="name"
+              aria-label="Nama"
+              placeholder="Nama"
+              class="p-3 border rounded-md"
+              required
+            />
+            <input
+              name="email"
+              aria-label="Email"
+              placeholder="Email"
+              type="email"
+              class="p-3 border rounded-md"
+              required
+            />
+          </div>
+          <input
+            name="subject"
+            aria-label="Subjek"
+            placeholder="Subjek"
+            class="p-3 border rounded-md"
+          />
+          <textarea
+            name="message"
+            aria-label="Pesan"
+            placeholder="Tulis pesan..."
+            rows="5"
+            class="p-3 border rounded-md"
+            required
+          ></textarea>
+          <div class="flex justify-center">
+            <button
+              type="submit"
+              class="bg-indigo-600 text-white px-4 py-2 rounded-md"
+            >
+              Kirim
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="bg-slate-50 border-t">
+      <div
+        class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500"
+      >
+        <div>
+          © <span id="year"></span> Gama Gamawijaya — Semua hak dilindungi.
+        </div>
+        <div class="mt-3 md:mt-0 flex gap-4">
+          <a href="#" class="hover:text-indigo-600">LinkedIn</a>
+          <a href="#" class="hover:text-indigo-600">GitHub</a>
+          <a href="#" class="hover:text-indigo-600">Twitter</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Toggle mobile menu
+      const btn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+      btn?.addEventListener("click", () => {
+        const isHidden = menu.classList.toggle("hidden");
+        btn.setAttribute("aria-expanded", String(!isHidden));
+      });
+
+      // Footer year
+      const yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Profile image loader with fallbacks.
+      (function () {
+        const imgEl = document.getElementById("heroPhoto");
+        if (!imgEl) return;
+
+        // Ordered list of candidate sources (relative paths preferred).
+        const candidates = [
+          "assets/src/img/gamawijaya.png",
+          "assets/gamawijaya.png",
+          "gamawijaya.png",
+        ];
+
+        const svgFallback =
+          "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23eef2ff'/><text x='50' y='55' font-size='44' text-anchor='middle' fill='%234f46e5' font-family='Arial, sans-serif'>G</text></svg>";
+
+        function tryLoad(list) {
+          if (!list.length) {
+            // final fallback: inline SVG data URL
+            imgEl.src =
+              "data:image/svg+xml;utf8," + encodeURIComponent(svgFallback);
+            imgEl.alt = "Avatar fallback";
+            return;
+          }
+          const src = list.shift();
+          const tester = new Image();
+          tester.onload = () => {
+            imgEl.src = src;
+            imgEl.alt = "Foto Gama Gamawijaya";
+          };
+          tester.onerror = () => tryLoad(list);
+          tester.src = src;
+        }
+
+        // Start trying candidates (use a copy to preserve original array)
+        tryLoad(candidates.slice());
+      })();
+    </script>
+  </body>
+</html>
